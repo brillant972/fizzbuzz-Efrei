@@ -28,3 +28,5 @@ class TestFizzBuzz(unittest.TestCase): # definition d'une classe de test
 
 if __name__ == '__main__':
     unittest.main()
+
+# ceci est un commentaire
