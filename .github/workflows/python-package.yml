@@ -1,0 +1,29 @@
+name: Python Tests
+
+## Déclencheur : exécute ce workflow lorsqu'il y a un push ou un pull request sur la branche main
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest # Utilise la dernière version d'Ubuntu
+
+    steps:
+      - name: Check out repository code # Check le code du dépot
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3 # Installe Python sur la machine virtuelle
+        with:
+          python-version: '3.9' 
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+
+      - name: Run tests
+        run: |
+          python -m unittest tests/tests.py
