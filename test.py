@@ -19,7 +19,7 @@ class TestFizzBuzz(unittest.TestCase): # definition d'une classe de test
         self.assertEqual(fizzbuzz(10), "Buzz")
 
     def test_multiple_de_3_et_5(self):
-        self.assertEqual(fizzbuzz(15), "FizzBuzz")
+        self.assertEqual(fizzbuzz(15), "Fizzbuzz")
         self.assertEqual(fizzbuzz(30), "FizzBuzz")
 
     def test_pas_multiple_de_3_ni_5(self):
