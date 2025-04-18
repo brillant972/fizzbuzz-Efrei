@@ -24,7 +24,7 @@ class TestFizzBuzz(unittest.TestCase): # definition d'une classe de test
 
     def test_pas_multiple_de_3_ni_5(self):
         self.assertEqual(fizzbuzz(1), "1")
-        self.assertEqual(fizzbuzz(7), "7")
+        self.assertEqual(fizzbuzz(7), "999")
 
 if __name__ == '__main__':
     unittest.main()
